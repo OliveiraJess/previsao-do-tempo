@@ -1,0 +1,42 @@
+.container {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.card {
+    border : 2px solid black;
+    display: inline-block;
+    padding: 1rem;
+}
+
+.title {
+    font-size     : large;
+    font-weight   : bold;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.main {
+    background-color: gray;
+}
+
+.city,
+.date,
+.temperature,
+.weather,
+.max-min,
+.search-label {
+    padding-bottom: 0.3rem;
+}
+
+.main-image {
+    background-color: blue;
+}
+
+.search {
+    background-color: yellow;
+}
+
+.search-label {
+    display: block;
+}

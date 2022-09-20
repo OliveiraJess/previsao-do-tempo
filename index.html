@@ -4,46 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <title>Previsão do Tempo</title>
 </head>
 
 <body>
-  <div>
+  <div class="container">
 
-    <div>
+    <div class="card">
 
-      <div>
-        TEMPO E TEMPERATURA
-      </div>
+      <h1 class="title">Tempo e Temperatura</h1>
 
-      <div>
-        <div>Cidade Exemplo, BR</div>
-        <div>Terça, 1 Dezembro 2020</div>
-        <div class="container-img">
+      <div class="main">
+        <p class="city">Cidade Exemplo, BR</p>
+        <p class="date">Terça, 1 Dezembro 2020</p>
+
+        <div class="main-image">
           <img src="./icons/unknown.png">
         </div>
-        <div>
-          <div>22</div>
-          <span>°c</span>
-        </div>
-        <div>Nublado</div>
-        <div>22°c / 23°c</div>
+
+        <p class="temperature">22 <span>°c</span></p>
+        <p class="weather">Nublado</p>
+        <p class="max-min">22°c / 23°c</p>
       </div>
 
-      <div>
-        <div>
-          <input type="text" placeholder="digite o nome da cidade" aria-label="Recipient's username"
-            aria-describedby="button-addon2">
-          <div>
-            <button type="button" id="button-addon2">
-              <i></i>
-            </button>
-          </div>
-        </div>
+      <div class="search">
+        <label class="search-label" for="search">Digite o nome da cidade</label>
+        <input class="search-input" type="text" placeholder="Orleans" id="search">
+        <button class="search-button" type="button"> Pesquisar</button>
       </div>
 
     </div>
   </div>
+
+  </div>
+
+  </div>
+
 </body>
 
 </html>
