@@ -118,5 +118,21 @@ function coordResults(lat, long) {
         })
 };
 
+containerTemperature.addEventListener('click', changeTemperature)
+
+function changeTemperature() {
+    let temperature_now = temperature.innerHTML
+
+    if (temperatureUnit.innerHTML === "°c") {
+        let fahrenheit = (temperature_now * (9 / 5)) + 32;
+        temperatureUnit.innerHTML = "°f";
+        temperature.innerHTML = Math.round(fahrenheit);
+    }
+    else {
+        let celsius = (temperature_now - 32) / (9 / 5);
+        temperatureUnit.innerHTML = "°c";
+        temperature.innerHTML = Math.round(celsius);
+    }
+};
 
 
