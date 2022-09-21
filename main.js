@@ -16,7 +16,9 @@ const api = {
     units: "metric"
 }
 
-
+searchButton.addEventListener('click', () => {
+    searchResults(searchInput.value)
+});
 
 searchInput.addEventListener('keypress', enter);
 
@@ -24,16 +26,8 @@ function enter(event) {
     if (event.code === "Enter") {
         searchResults(searchInput.value)
     }
-    console.log("enter")
-}
-
-searchButton.addEventListener('click', () => {
-    searchResults(searchInput.value)
-    console.log("clicado")
-});
+};
 
 function searchResults(city) {
     console.log("chamando funcao")
-
-}
-console.log(searchInput.value)
+};
