@@ -29,5 +29,21 @@ function enter(event) {
 };
 
 function searchResults(city) {
-    console.log("chamando funcao")
+    fetch(`${api.base}weather?q=${city},&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+            if (response.status == 200) {
+                displayResults(response)
+
+            }
+            else if (response.status != 200) {
+                throw new Error(`Algo deu errado: status ${response.status}`)
+            }
+        })
+        .catch(error => {
+            alert(error.message)
+        })
 };
+
+function displayResults(weather) {
+    console.log(weather)
+}
