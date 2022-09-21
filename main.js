@@ -32,7 +32,7 @@ function searchResults(city) {
     fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
         .then(response => {
             if (response.status == 200) {
-               return response.json();
+                return response.json();
             }
             else if (response.status != 200) {
                 throw new Error(`Algo deu errado: status ${response.status}`);
@@ -77,4 +77,8 @@ function dateBuilder(d) {
     let year = d.getFullYear();
 
     return `${day}, ${date} ${month} ${year}`;
+};
+
+function capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.substr(1)
 }
