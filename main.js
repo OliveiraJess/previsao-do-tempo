@@ -47,7 +47,7 @@ function searchResults(city) {
 };
 
 function displayResults(weather) {
-    console.log(weather)
+    // console.log(weather)
 
     city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -82,3 +82,41 @@ function dateBuilder(d) {
 function capitalizeFirstLetter(string) {
     return string[0].toUpperCase() + string.substr(1)
 }
+
+
+window.addEventListener('load', locationCurrent)
+
+function locationCurrent() {
+
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(location);
+    } else {
+        alert(`Erro: ${error.message}`);
+    }
+    function location(position) {
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        coordResults(lat, long);
+    }
+};
+
+function coordResults(lat, long) {
+    fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+        .then(response => {
+            if (response.status == 200) {
+                return response.json();
+            }
+            else if (response.status != 200) {
+                throw new Error(`Algo deu errado: status ${response.status}`);
+            }
+        })
+        .catch(error => {
+            alert(error.message);
+        })
+        .then(response => {
+            displayResults(response);
+        })
+};
+
+
+
