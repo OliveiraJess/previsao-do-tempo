@@ -30,8 +30,13 @@
 }
 
 .temperature {
-    cursor: pointer;
     background-color: red;
+    display: inline;
+}
+
+.main_temperature {
+    background-color: pink;
+    cursor: pointer;
     font-size: 5rem;
 }
 
