@@ -1,10 +1,13 @@
 .container {
     margin-top: 25px;
     text-align: center;
+    font-size: 1.1em ;
+    font-family:'Times New Roman', Times, serif
 }
 
 .card {
-    border : 2px solid black;
+    border : 2px solid gray;
+    border-radius: 5px;
     display: inline-block;
     padding: 1rem;
 }
@@ -16,10 +19,6 @@
     text-transform: uppercase;
 }
 
-.main {
-    background-color: gray;
-}
-
 .city,
 .date,
 .temperature,
@@ -29,23 +28,21 @@
     padding-bottom: 0.3rem;
 }
 
+.main_temperature {
+    background-color: rgb(18, 138, 206, 0.5);
+    box-shadow      : 4px 5px rgba(0, 0, 0, 0.6);
+    cursor   : pointer;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .temperature {
-    background-color: red;
     display: inline;
 }
 
-.main_temperature {
-    background-color: pink;
-    cursor: pointer;
-    font-size: 5rem;
-}
-
-.main_image {
-    background-color: blue;
-}
-
-.search {
-    background-color: yellow;
+.weather {
+    padding-top: 1rem;
 }
 
 .search_label {
