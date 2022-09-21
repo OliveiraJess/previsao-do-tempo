@@ -25,11 +25,17 @@
 .temperature,
 .weather,
 .max-min,
-.search-label {
+.search_label {
     padding-bottom: 0.3rem;
 }
 
-.main-image {
+.temperature {
+    cursor: pointer;
+    background-color: red;
+    font-size: 5rem;
+}
+
+.main_image {
     background-color: blue;
 }
 
@@ -37,6 +43,6 @@
     background-color: yellow;
 }
 
-.search-label {
+.search_label {
     display: block;
 }
