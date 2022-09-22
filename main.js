@@ -8,6 +8,7 @@ const weatherTemperature = document.querySelector('.weather');
 const maxMin = document.querySelector('.max-min');
 const searchInput = document.querySelector('.search_input');
 const searchButton = document.querySelector('.search_button');
+const searchCountry = document.getElementById("country");
 
 const api = {
     key: "ac4c350b9adb9fa9eb9271bc4b823c22",
@@ -15,6 +16,15 @@ const api = {
     lang: "pt_br",
     units: "metric"
 }
+
+
+const countriesArray = ["BR", "US", "CH", "CA", "RU", "IT"];
+
+countriesArray.forEach((country) => {
+    option = new Option(country, country.toUpperCase());
+    searchCountry.options[searchCountry.options.length] = option;
+  });
+
 
 searchButton.addEventListener('click', () => {
     searchResults(searchInput.value)
@@ -29,7 +39,7 @@ function enter(event) {
 };
 
 function searchResults(city) {
-    fetch(`${api.base}weather?q=${city}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
+    fetch(`${api.base}weather?q=${city},${searchCountry.value}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
         .then(response => {
             if (response.status == 200) {
                 return response.json();
@@ -135,4 +145,4 @@ function changeTemperature() {
     }
 };
 
-
+console.log(searchCountry.value)
