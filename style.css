@@ -66,6 +66,12 @@
     outline   : 0;
 }
 
+.search_country:hover,
+.search_input:hover,
+.search_button:hover {
+    border-color: rgb(18, 138, 206);
+}
+
 .search_input {
     border       : 1px solid gray;
     border-radius: 7px;
