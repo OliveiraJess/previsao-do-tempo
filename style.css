@@ -1,15 +1,15 @@
 .container {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 1.1em ;
+    margin-top : 25px;
+    text-align : center;
+    font-size  : 1.1em;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .card {
-    border : 2px solid gray;
+    border       : 2px solid gray;
     border-radius: 5px;
-    display: inline-block;
-    padding: 1rem;
+    display      : inline-block;
+    padding      : 1rem;
 }
 
 .title {
@@ -31,10 +31,10 @@
 .main_temperature {
     background-color: rgb(18, 138, 206, 0.5);
     box-shadow      : 4px 5px rgba(0, 0, 0, 0.6);
-    cursor   : pointer;
-    font-size: 5rem;
-    font-weight: 900;
-    text-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+    cursor          : pointer;
+    font-size       : 5rem;
+    font-weight     : 900;
+    text-shadow     : 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .temperature {
@@ -46,5 +46,6 @@
 }
 
 .search_label {
-    display: block;
+    display  : block;
+    font-size: 0.9em;
 }

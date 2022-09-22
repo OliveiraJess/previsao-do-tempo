@@ -17,13 +17,24 @@ const api = {
     units: "metric"
 }
 
-
 const countriesArray = ["BR", "US", "CH", "CA", "RU", "IT"];
+
+// const countriesArray = {
+//     BR: "BR",
+//     US: "US",
+//     IT: "IT",
+//     RU: "RU"
+//   };
+
+//   for(country in countriesArray) {
+//     option = new Option(countriesArray[country], country);
+//     searchCountry.options[searchCountry.options.length] = option;
+//   }
 
 countriesArray.forEach((country) => {
     option = new Option(country, country.toUpperCase());
     searchCountry.options[searchCountry.options.length] = option;
-  });
+});
 
 
 searchButton.addEventListener('click', () => {
