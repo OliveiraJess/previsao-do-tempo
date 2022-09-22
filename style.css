@@ -1,3 +1,7 @@
+::selection {
+    background-color: rgb(18, 138, 206);
+}
+
 .container {
     margin-top : 25px;
     text-align : center;
@@ -48,4 +52,30 @@
 .search_label {
     display  : block;
     font-size: 0.9em;
+}
+
+.search_country {
+    border-radius: 3px;
+    cursor       : pointer;
+    font-family  : inherit;
+}
+
+.search_country,
+.search_input:focus {
+    box-shadow: 0 0 0 0;
+    outline   : 0;
+}
+
+.search_input {
+    border       : 1px solid gray;
+    border-radius: 7px;
+    cursor       : pointer;
+    font-family  : inherit;
+}
+
+.search_button {
+    background-color: transparent;
+    border          : 1px solid gray;
+    border-radius   : 3px;
+    cursor          : pointer;
 }
