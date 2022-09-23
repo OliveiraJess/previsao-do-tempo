@@ -15,17 +15,19 @@ const api = {
     base: "https://api.openweathermap.org/data/2.5/",
     lang: "pt_br",
     units: "metric"
-}
+};
 
 const apiCountry = {
-    key: "8cf669232839b83a5cd010e675b6c49a",
+    // key: "8cf669232839b83a5cd010e675b6c49a",
+    key: "fa76945be2f57ac51a24ae66e1b4c2d0",
     base: "http://api.countrylayer.com/v2/"
-}
+};
 
 async function countries() {
-    const response = await fetch(`${apiCountry.base}all?access_key=${apiCountry.key}`)
-    return response.json()
-}
+    const response = await fetch(`${apiCountry.base}all?access_key=${apiCountry.key}`);
+
+    return response.json();
+};
 
 // countries().then(data => console.log(data))
 
@@ -42,6 +44,7 @@ countries().then(data => {
 })
 
 
+
 searchButton.addEventListener('click', () => {
     searchResults(searchInput.value)
 });
@@ -53,6 +56,16 @@ function enter(event) {
         searchResults(searchInput.value)
     }
 };
+
+searchInput.addEventListener("keypress", justLetters);
+
+function justLetters(event) {
+    let keyCode = (event.keyCode ? event.keyCode : event.which);
+
+    if (keyCode > 47 && keyCode < 58) {
+        event.preventDefault();
+    }
+}
 
 function searchResults(city) {
     fetch(`${api.base}weather?q=${city},${searchCountry.value}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)

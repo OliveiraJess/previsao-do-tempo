@@ -119,27 +119,6 @@
 
 }
 
-
-@media screen and (min-width: 280px) {
-
-    .search_country {
-        display    : block;
-        margin-left: 10%;
-    }
-
-    .search_country,
-    .search_input,
-    .search_button {
-        width: 80%;
-    }
-
-    .search_input {
-        margin-bottom: 0.3rem;
-        margin-top   : 0.3rem;
-    }
-
-}
-
 @media screen and (min-width: 400px) {
 
     .container {
