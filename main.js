@@ -17,24 +17,29 @@ const api = {
     units: "metric"
 }
 
-const countriesArray = ["BR", "US", "CH", "CA", "RU", "IT"];
+const apiCountry = {
+    key: "8cf669232839b83a5cd010e675b6c49a",
+    base: "http://api.countrylayer.com/v2/"
+}
 
-// const countriesArray = {
-//     BR: "BR",
-//     US: "US",
-//     IT: "IT",
-//     RU: "RU"
-//   };
+async function countries() {
+    const response = await fetch(`${apiCountry.base}all?access_key=${apiCountry.key}`)
+    return response.json()
+}
 
-//   for(country in countriesArray) {
-//     option = new Option(countriesArray[country], country);
-//     searchCountry.options[searchCountry.options.length] = option;
-//   }
+// countries().then(data => console.log(data))
 
-countriesArray.forEach((country) => {
-    option = new Option(country, country.toUpperCase());
-    searchCountry.options[searchCountry.options.length] = option;
-});
+countries().then(data => {
+    const countriesData = data
+    const countriesResults = countriesData.map(country => country.alpha2Code)
+
+    // console.log(countriesResults)
+
+    countriesResults.forEach((country) => {
+        option = new Option(country, country.toUpperCase());
+        searchCountry.options[searchCountry.options.length] = option;
+    });
+})
 
 
 searchButton.addEventListener('click', () => {
@@ -156,4 +161,3 @@ function changeTemperature() {
     }
 };
 
-console.log(searchCountry.value)
