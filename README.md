@@ -12,8 +12,8 @@
 
 </br>
 
-<p align="center">Nesse projeto é possível ver a previsão do tempo com base na cidade (obrigatório) e país (opcional - default US).</p>
-<p align="center"> Obs.: O app pede a localização atual, você pode aceitar ou recusar.</p>
+<p align="center">Nesse projeto é possível ver a previsão do tempo com base no país e cidade ou habilitar a geolocalização.</p>
+
 
 </br>
 
@@ -23,11 +23,49 @@
 
 <h2>🔧 Instalação</h2>
 
-<p>Para utilizar a aplicação você precisa dar um: </p>
+<p>Para utilizar a aplicação você precisa usar o comando: </p>
 
 ```
 - git clone
 ```
+<h2>⚙️ Utilizando</h2>
+
+<p>Selecione o país (opcional - default US) e digite a cidade (obrigatório) e click no botão ou pressione "Enter".</p>
+
+<p>Você também pode habilitar a geolocalização (opcional)</p>
+
+<p>A API de países (Countrylayer API) utilizada no projeto possui limite de 50 requisições mensais, dessa forma, se você receber os códigos de erro abaixo, o número de requisicões foi atingido.</p>
+
+```
+- status 429
+- status 104
+
+```
+<p>Você pode continuar a busca sem utilizar o país, digitando apenas a cidade, porém caso haja mais de uma cidade com o mesmo haverá incompatibilidade</p>
+
+<p>Outra forma de resolver é entrar no site e realizar o cadastro gratuito para obter uma chave. Essa chave você substitui em:</p>
+
+```
+const apiCountry = {
+    key: "SUA_CHAVE_AQUI",
+    base: "http://api.countrylayer.com/v2/"
+};
+
+```
+
+<h2>🚀 Site API's</h2>
+
+<p>Abaixo está o link dos sites utilizados para fazer a requisições as API'S.</p>
+
+<h4>
+    <a href="https://countrylayer.com/">🔗 Countrylayer</a>
+</h4>
+
+<h4>
+    <a href="https://openweathermap.org/">🔗 Open Weather</a>
+</h4>
+
+
 
 <h2>🤝 Contribuindo </h2>
 
@@ -35,6 +73,12 @@
 * Estrela no projeto ⭐️
 
 <h4 align="center">📌 Finalizado</h4>
+
+
+
+
+
+
 
 
 
