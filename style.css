@@ -1,16 +1,27 @@
+:root {
+
+    --blue     : rgb(18, 138, 206);
+    --blueAlpha: rgb(18, 138, 206, 0.5);
+    --gray     : gray;
+    --shadow   : rgba(0, 0, 0, 0.3);
+
+    --timesNewRoman: 'Times New Roman', Times, serif;
+}
+
+
 ::selection {
-    background-color: rgb(18, 138, 206);
+    background-color: var(--blue);
 }
 
 .container {
     margin-top : 25px;
     text-align : center;
     font-size  : 1.1em;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--timesNewRoman)
 }
 
 .card {
-    border       : 2px solid gray;
+    border       : 2px solid var(--gray);
     border-radius: 5px;
     display      : inline-block;
     padding      : 1rem;
@@ -33,12 +44,12 @@
 }
 
 .main_temperature {
-    background-color: rgb(18, 138, 206, 0.5);
-    box-shadow      : 4px 5px rgba(0, 0, 0, 0.6);
+    background-color: var(--blueAlpha);
+    box-shadow      : 4px 5px var(--shadow);
     cursor          : pointer;
     font-size       : 5rem;
     font-weight     : 900;
-    text-shadow     : 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow     : 2px 5px var(--shadow);
 }
 
 .temperature {
@@ -55,7 +66,7 @@
 }
 
 .search_country {
-    border-radius: 3px;
+    border-radius: 7px;
     cursor       : pointer;
     font-family  : inherit;
 }
@@ -69,19 +80,91 @@
 .search_country:hover,
 .search_input:hover,
 .search_button:hover {
-    border-color: rgb(18, 138, 206);
+    border-color: var(--blue);
 }
 
 .search_input {
-    border       : 1px solid gray;
+    border       : 1px solid var(--gray);
     border-radius: 7px;
     cursor       : pointer;
     font-family  : inherit;
+    padding      : 0;
 }
 
 .search_button {
     background-color: transparent;
-    border          : 1px solid gray;
-    border-radius   : 3px;
+    border          : 1px solid var(--gray);
+    border-radius   : 7px;
     cursor          : pointer;
+}
+
+
+@media screen and (min-width: 280px) {
+
+    .search_country {
+        display    : block;
+        margin-left: 10%;
+    }
+
+    .search_country,
+    .search_input,
+    .search_button {
+        width: 80%;
+    }
+
+    .search_input {
+        margin-bottom: 0.3rem;
+        margin-top   : 0.3rem;
+    }
+
+}
+
+
+@media screen and (min-width: 280px) {
+
+    .search_country {
+        display    : block;
+        margin-left: 10%;
+    }
+
+    .search_country,
+    .search_input,
+    .search_button {
+        width: 80%;
+    }
+
+    .search_input {
+        margin-bottom: 0.3rem;
+        margin-top   : 0.3rem;
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .container {
+        font-size: 1.5em;
+    }
+
+    .search_country {
+        display: inline-block;
+    }
+
+    .search_country,
+    .search_input,
+    .search_button {
+        font-size     : 1.1rem;
+        height        : 25px;
+        margin        : auto;
+        vertical-align: middle;
+        width         : auto;
+    }
+
+    .search_button {
+        width: 50px;
+    }
+
+    ::placeholder {
+        font-size: 1.1rem;
+    }
 }
