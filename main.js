@@ -18,7 +18,6 @@ const api = {
 };
 
 const apiCountry = {
-    // key: "8cf669232839b83a5cd010e675b6c49a",
     key: "fa76945be2f57ac51a24ae66e1b4c2d0",
     base: "http://api.countrylayer.com/v2/"
 };
