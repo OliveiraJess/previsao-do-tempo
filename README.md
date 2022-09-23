@@ -30,8 +30,8 @@
 
 <h2>🤝 Contribuindo </h2>
 
-* Conte a outras pessoas sobre este projeto 📢;
-* Estrelar o projeto ⭐️.
+* Conte a outras pessoas sobre este projeto 📢
+* Estrelar o projeto ⭐️
 
 <h4 align="center">📌 Finalizado</h4>
 
