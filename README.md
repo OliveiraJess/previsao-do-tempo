@@ -12,7 +12,7 @@
 
 </br>
 
-<p align="center">Nesse projeto é possível ver a previsão do tempo com base no país e cidade ou habilitar a geolocalização.</p>
+<p align="center">Nesse projeto é possível ver a previsão do tempo com base no país e cidade ou habilitando a geolocalização.</p>
 
 
 </br>
