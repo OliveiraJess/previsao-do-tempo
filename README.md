@@ -7,12 +7,13 @@
 
 </div>
 <div align="center">
-<img height="400px" src="https://github.com/OliveiraJess/previsao-do-tempo/blob/main/src/image.png" alt="orleans/sc e orleans/us" />
+<img height="400px" src="https://github.com/OliveiraJess/previsao-do-tempo/blob/main/img/image.png" alt="orleans/sc e orleans/us" />
 </div>
 
 </br>
 
 <p align="center">Nesse projeto é possível ver a previsão do tempo com base na cidade (obrigatório) e país (opcional - default US).</p>
+<p align="center"> Obs.: O app pede a localização atual, você pode aceitar ou recusar.</p>
 
 </br>
 
@@ -31,7 +32,7 @@
 <h2>🤝 Contribuindo </h2>
 
 * Conte a outras pessoas sobre este projeto 📢
-* Estrelar o projeto ⭐️
+* Estrela no projeto ⭐️
 
 <h4 align="center">📌 Finalizado</h4>
 
